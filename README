@@ -1,0 +1,18 @@
+Iniciando com o GIT e com o GITHUB
+
+1. Crie um conta grátis no github.com, veja como aqui: http://github.com/signup/free
+2. Configure o github, veja como aqui: http://help.github.com/mac-set-up-git/
+3. Crie um "fork" do repositorio http://github.com/euvotodistrital/evd-site, veja como aqui: http://help.github.com/fork-a-repo/
+4. Após criar as alterações que deseja, faça um "pull request", veja como aqui: http://help.github.com/send-pull-requests/
+
+Configurando o wordpress local
+
+1. Faça o clone do repositório em uma pasta do servidor web em seu computador;
+2. Crie um banco de dados no servidor local mysql e guarde as configurações(nome do banco, usuário e senha);
+3. Rode o arquivo sql que está na raiz do repositório para o banco de dados que acabou de criar;
+4. Rode os seguintes comandos SQL's "update wp_options set option_value="http://localhost/evd-site/evd/" where option_id=1;" e "update wp_options set option_value="http://localhost/evd-site/" where option_id=37;" alterando o caminho do servidor para de acordo com sua necessidade;
+5. Habilite o "mod_rewrite" no apache e opie o arquivo .htaccess-sample para .htaccess que está na raiz;
+6. Arquivo no .htaccess a diretiva "RewriteBase" de acordo com sua necessidade;
+5. Copie o arquivo wp-config.php.sample para wp-config.php e altere os dados de acesso ao banco de dados;
+
+Acesse o endereço local e comece a contribuir, agora você já pode!

@@ -1,0 +1,121 @@
+/*
+  Esse plugin foi modificado para o site http://euvotodistrital.org.br
+
+  Stylesheet for the Meteor Slides slideshow
+*/
+
+#meteor-slideshow, .meteor-slides {
+	margin: 0;
+	padding: 0 0 15px 0;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.slides {
+	margin: 0;
+	padding: 0;
+}
+
+#meteor-slideshow .slide {
+	margin: 0;
+	padding: 0;
+	display: none;
+}
+
+#meteor-slideshow #slide-1 {
+	display: block;
+}
+
+#meteor-slideshow .slide a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#meteor-slideshow .slide img {
+	display: block;
+	margin: auto;
+	padding: 0;
+	border: 0;
+}
+
+#meteor-slideshow .slide .slide-title {
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 25px;
+	z-index: 50;
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+  color: #FFF;
+	/*background-color:rgba(0,0,0,0.3);*/
+  background: url(../images/bg-title.png) repeat-x top left;
+  padding: 6px 0 0 17px
+}
+
+ul#meteor-nav {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul#meteor-nav li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+#meteor-nav #prev a {
+	left: 0px;
+}
+
+#meteor-nav #next a {
+	right: 0px;
+}
+
+#meteor-nav a {
+	display: block;
+	position: absolute;
+	z-index: 50;
+	width: 25px;
+	text-indent: -9999px;
+	outline: none;
+}
+	
+#meteor-buttons {
+	position: absolute;
+	top: 40px;
+	left: 0;
+  z-index: 50;
+  margin: 0;
+  list-style: none;
+}
+
+#meteor-buttons li {
+  margin-bottom: 7px;
+}
+
+#meteor-buttons a {
+  position: relative;
+  left: 0;
+  display: block;
+  width: 10px;
+	height: 20px;
+  font-weight: bold;
+  color: #FFF;
+  background-color: #F47421;
+	outline: none;
+  padding: 5px 2px 2px 5px;
+}
+
+#meteor-buttons a:hover {
+  text-decoration: none;
+}
+
+#meteor-buttons li.activeSlide a {
+	background-color: #064B7E;
+}

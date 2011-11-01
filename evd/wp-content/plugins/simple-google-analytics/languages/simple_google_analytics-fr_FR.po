@@ -1,0 +1,76 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: simple_google_analytics\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-03-24 11:05+0100\n"
+"PO-Revision-Date: 2011-03-24 11:06+0100\n"
+"Last-Translator: Jerome Meyer <jerome@hollywoud.net>\n"
+"Language-Team: JeromeMeyer62 <jerome@hollywoud.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: C:\\Users\\Jerome\\Documents\\Dev\\Jerome\\Wordpress\\simple-google-analytics\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: simple_google_analytics.php:68
+msgid "Simple Google Analytics."
+msgstr "Simple Google Analytics"
+
+#: simple_google_analytics.php:71
+msgid "Simple Google Analytics allows you to easilly add your Google Analytics code on all your pages."
+msgstr "Simple Google Analytics vous permet d'ajouter simplement votre code Google Analytics dans toutes vos pages"
+
+#: simple_google_analytics.php:73
+msgid "Just add your ID, choose if you are on a sub-domain (setting in Google Analytics code), and enter the domain."
+msgstr "Ajoutez juste votre ID, choisissez si vous êtes sur un sous-domaine (paramètre dans le code Google Analytics), et entrez le domaine."
+
+#: simple_google_analytics.php:75
+msgid "That's all, you're ready to go."
+msgstr "C'est tout, vous pouvez continuer."
+
+#: simple_google_analytics.php:84
+msgid "Google Analytics ID"
+msgstr "ID Google Analytics"
+
+#: simple_google_analytics.php:86
+msgid "Example : UA-0000000-0."
+msgstr "Exemple : UA-0000000-0."
+
+#: simple_google_analytics.php:90
+msgid "Is your blog a sub-domain ? (Google Analytics Setting)"
+msgstr "Est-ce que le blog est un sous-domaine ? (Paramètre Google Analytics)"
+
+#: simple_google_analytics.php:93
+msgid "No"
+msgstr "Non"
+
+#: simple_google_analytics.php:94
+msgid "Yes"
+msgstr "Oui"
+
+#: simple_google_analytics.php:99
+msgid "Domain"
+msgstr "Domaine"
+
+#: simple_google_analytics.php:101
+msgid "Example : domain.com"
+msgstr "Exemple : domaine.com"
+
+#: simple_google_analytics.php:107
+msgid "Save Changes"
+msgstr "Sauvegarder les changements"
+
+#: simple_google_analytics.php:113
+msgid "If you need any support go to the plugin homepage and contact me !"
+msgstr "Si vous avez des questions, n'hésitez pas à aller sur la page de l'extension et à me contacter !"
+
+#: simple_google_analytics.php:117
+msgid "This plugin is largely inspired by the Google Analytics Input plugin from Roy Duff ( http://wpable.com )."
+msgstr "Cette extension est largement inspirée par l'extension Google Analytics Input de Roy Duff ( http://wpable.com )."
+
+#: simple_google_analytics.php:119
+msgid "If you like this plugin, you can Donate :)"
+msgstr "Si vous aimé cette extension, vous pouvez me faire un don :)"
+

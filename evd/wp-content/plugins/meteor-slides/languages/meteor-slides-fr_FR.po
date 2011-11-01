@@ -1,0 +1,262 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Meteor Slides 1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-07-16 13:34-0600\n"
+"PO-Revision-Date: 2010-07-19 11:15+0100\n"
+"Last-Translator: Kickflowers <florent.quiquandon@gmail.com>\n"
+"Language-Team: Josh Leuze <mail@jleuze.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: meteor-slides-plugin.php:76
+msgid "Slides"
+msgstr "Diaporamas"
+
+#: meteor-slides-plugin.php:77
+msgid "Slide"
+msgstr "Diaporama"
+
+#: meteor-slides-plugin.php:78
+msgid "Add New"
+msgstr "Ajoutez un nouveau"
+
+#: meteor-slides-plugin.php:79
+msgid "Add New Slide"
+msgstr "Ajoutez un nouveau diaporama"
+
+#: meteor-slides-plugin.php:80
+msgid "Edit Slide"
+msgstr "Modifier le diaporama"
+
+#: meteor-slides-plugin.php:81
+msgid "Edit"
+msgstr "Modifier"
+
+#: meteor-slides-plugin.php:82
+msgid "New Slide"
+msgstr "Nouveau diaporama"
+
+#: meteor-slides-plugin.php:83
+#: meteor-slides-plugin.php:87
+msgid "View Slide"
+msgstr "Voir le diaporama"
+
+#: meteor-slides-plugin.php:84
+msgid "Search Slides"
+msgstr "Chercher un diaporama"
+
+#: meteor-slides-plugin.php:85
+msgid "No slides found"
+msgstr "Aucun diaporamas trouvés"
+
+#: meteor-slides-plugin.php:86
+msgid "No slides found in Trash"
+msgstr "Aucun diaporamas trouvés dans la corbeille"
+
+#: meteor-slides-plugin.php:119
+msgid "Slide Image"
+msgstr "Image slide"
+
+#: meteor-slides-plugin.php:154
+msgid "Add the URL this slide should link to."
+msgstr "Ajoutez l'URL qui se référe  à ce diaporama"
+
+#: meteor-slides-plugin.php:166
+msgid "Slide Link"
+msgstr "Lien du diaporama"
+
+#: meteor-slides-plugin.php:230
+msgid "Slides Settings"
+msgstr "Réglages du diaporama"
+
+#: meteor-slides-plugin.php:230
+msgid "Settings"
+msgstr "Réglages"
+
+#: meteor-slides-plugin.php:248
+msgid "Configure Slideshow"
+msgstr "Configurer le diaporama"
+
+#: meteor-slides-plugin.php:250
+msgid "Slideshow Quantity"
+msgstr "Quantité de diaporama"
+
+#: meteor-slides-plugin.php:252
+msgid "Slide Height"
+msgstr "Hauteur du diaporama"
+
+#: meteor-slides-plugin.php:254
+msgid "Slide Width"
+msgstr "Largeur du diaporama"
+
+#: meteor-slides-plugin.php:256
+msgid "Transition Style"
+msgstr "Effet de transition"
+
+#: meteor-slides-plugin.php:258
+msgid "Transition Speed"
+msgstr "Vitesse de transition"
+
+#: meteor-slides-plugin.php:260
+msgid "Slide Duration"
+msgstr "Durée du diaporama"
+
+#: meteor-slides-plugin.php:471
+msgid "Add Meteor Slides slideshow to a sidebar"
+msgstr "Ajoutez un Meteor Slide à la barre latérale"
+
+#: meteor-slides-plugin.php:475
+msgid "Meteor Slides Widget"
+msgstr "Widget Meteor Slide"
+
+#: meteor-slides-settings.php:7
+msgid "Set up your slideshow using the options below."
+msgstr "Configurer votre diaporama en utilisant les options ci-dessous"
+
+#: meteor-slides-settings.php:21
+#: meteor-slides-settings.php:31
+msgid "px"
+msgstr "px"
+
+#: meteor-slides-settings.php:41
+msgid "blindX"
+msgstr "blindX"
+
+#: meteor-slides-settings.php:41
+msgid "blindY"
+msgstr "blindY"
+
+#: meteor-slides-settings.php:41
+msgid "blindZ"
+msgstr "blindZ"
+
+#: meteor-slides-settings.php:41
+msgid "cover"
+msgstr "couvrir"
+
+#: meteor-slides-settings.php:41
+msgid "curtainX"
+msgstr "rideauX"
+
+#: meteor-slides-settings.php:41
+msgid "curtainY"
+msgstr "rideauY"
+
+#: meteor-slides-settings.php:41
+msgid "fade"
+msgstr "fondu"
+
+#: meteor-slides-settings.php:41
+msgid "fadeZoom"
+msgstr "foudu zoom"
+
+#: meteor-slides-settings.php:41
+msgid "growX"
+msgstr "agrandirX"
+
+#: meteor-slides-settings.php:41
+msgid "growY"
+msgstr "agrandirY"
+
+#: meteor-slides-settings.php:41
+msgid "none"
+msgstr "aucun"
+
+#: meteor-slides-settings.php:41
+msgid "scrollUp"
+msgstr "roulement vers le haut"
+
+#: meteor-slides-settings.php:41
+msgid "scrollDown"
+msgstr "roulement vers le bas"
+
+#: meteor-slides-settings.php:41
+msgid "scrollLeft"
+msgstr "roulement vers la gauche"
+
+#: meteor-slides-settings.php:41
+msgid "scrollRight"
+msgstr "roulement vers la droite"
+
+#: meteor-slides-settings.php:41
+msgid "scrollHorz"
+msgstr "roulement Hortz"
+
+#: meteor-slides-settings.php:41
+msgid "scrollVert"
+msgstr "roulement Vert"
+
+#: meteor-slides-settings.php:41
+msgid "slideX"
+msgstr "slideX"
+
+#: meteor-slides-settings.php:41
+msgid "slideY"
+msgstr "slideY"
+
+#: meteor-slides-settings.php:41
+msgid "shuffle"
+msgstr "aléatoire"
+
+#: meteor-slides-settings.php:41
+msgid "turnUp"
+msgstr "Montée"
+
+#: meteor-slides-settings.php:41
+msgid "turnDown"
+msgstr "Descente"
+
+#: meteor-slides-settings.php:41
+msgid "turnLeft"
+msgstr "Tourner vers la gauche"
+
+#: meteor-slides-settings.php:41
+msgid "turnRight"
+msgstr "Tourner vers la droite"
+
+#: meteor-slides-settings.php:41
+msgid "uncover"
+msgstr "Dévoiler"
+
+#: meteor-slides-settings.php:41
+msgid "wipe"
+msgstr "essuyer"
+
+#: meteor-slides-settings.php:41
+msgid "zoom"
+msgstr "zoomer"
+
+#: meteor-slides-settings.php:63
+#: meteor-slides-settings.php:73
+msgid "seconds"
+msgstr "secondes"
+
+#: meteor-slides-settings.php:87
+msgid "Meteor Slides Settings"
+msgstr "Réglages Meteor Slide"
+
+#: meteor-slides-settings.php:101
+msgid "Save Changes"
+msgstr "Enregistrer les changements"
+
+#: meteor-slides-settings.php:107
+msgid "Install Slideshow"
+msgstr "Installer Meteor Slide"
+
+#: meteor-slides-settings.php:109
+#, php-format
+msgid "Use %1$s to add this slideshow to your theme, use %2$s to add it to your Post or Page content, or use the Meteor Slides Widget to add it to a sidebar."
+msgstr "Pour ajouter les diaporamas à votre thème utilisez %1$s, pourles 'ajouter au contenu de vos articles ou pages, utilisez %2s, ou utilisez le widget Meteor Slides pour rajoutez les diaporamas à votre barre latérale. "
+
+#: meteor-slides-settings.php:111
+#, php-format
+msgid "Please %1$spost any questions or problems%2$s in the WordPress.org support forums."
+msgstr "S'il vous plait veuillez poster %1$s vos questions ou problemes %2$s dans le forum de support sur Wordpress.org"
+

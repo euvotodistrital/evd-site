@@ -1,0 +1,9 @@
+/* --- IE hacks --- */
+
+.box {
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color='#dadada');
+}
+
+fieldset.sign #captcha {
+  background: transparent; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000090,endColorstr=#00000090); zoom: 1;
+}

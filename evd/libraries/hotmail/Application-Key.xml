@@ -1,0 +1,13 @@
+<!--
+     It is strongly recommended that you store the Windows Live Login
+     settings file outside of the web-accessible area on your server.
+     The contents of this file should never be exposed externally.
+-->
+
+<windowslivelogin>
+  <appid>0000000048057B45</appid>
+  <secret>JWJ1yPZ2XrhXRqc7FlwvIwLdneImQMar</secret>
+  <returnurl>http://www.euvotodistrital.org.br/convide/hotmail</returnurl>
+  <policyurl>http://www.euvotodistrital.org.br/</policyurl>
+  <securityalgorithm>wsignin1.0</securityalgorithm>
+</windowslivelogin>

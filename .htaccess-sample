@@ -1,0 +1,16 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /evd-site/
+
+RewriteRule ^wp-content/(.*) evd/wp-content/$1 [L]
+RewriteRule ^mobilizeja /tag/mobilizeja/ [R=301,L]
+RewriteRule ^mobilize/grupos-de-e-mail /mobilize/grupos-de-acao/ [R=301,L]
+RewriteRule ^o-movimento/mapa-dos-apoiadores /o-movimento/apoiadores/ [R=301,L]
+
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+</IfModule>
+# END WordPress

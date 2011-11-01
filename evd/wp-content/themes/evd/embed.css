@@ -1,0 +1,55 @@
+/* --- Reset --- */
+
+* { margin: 0; padding: 0; }
+
+/* --- Structure --- */
+
+html { color: #333; font: 100% 'helvetica neue', helvetica, arial, sans-serif; overflow: hidden; line-height: 1.125em; }
+body { font-size: .75em; }
+
+input,
+button { font: 1em 'helvetica neue', helvetica, arial, sans-serif; }
+input.text { height: 15px; padding: 2px 4px; border: 0 none; background: url('images/form-input-background.png') repeat; }
+button { cursor: pointer; }
+fieldset,
+img { border: 0 none; }
+
+a { color: #999; text-decoration: none; }
+
+:focus { outline: 0 none; }
+
+#embed { width: 320px; height: 580px; background-color: #FFF; }
+  #embed h1 { padding: 18px 45px 13px}
+    #embed h1 a {display: block; width: 200px; height: 83px; background: url(images/embed/logo.png) no-repeat top left; text-indent: -5000px; }
+  #embed h2 { display: none }
+  #embed h3 { font-size: 1.33em; font-weight: bold; line-height: 1.25em; padding: 8px 8px 14px 20px }
+    #embed h3 span { color: #f47421; }
+  #embed .votes {}
+    #embed .votes h4 { width: 100%; height: 25px; background: #bdd73d  }
+      #embed .votes h4 span { display: block; width: 50%; height: 21px; background: #064b7e; color: #FFF; font-size: 2em; text-align: left; text-indent: 20px; padding-top: 4px }
+  #embed p { font-size: 1em; line-height: 1.3em; padding: 2px 0 0 20px }
+
+fieldset.sign { margin: 6px 0 0 20px; }
+  fieldset.sign h2 { height: 83px; margin-top: 0px; color: #064b7e; font-size: 1.42em; line-height: 1.16em; }
+    fieldset.sign h2 a { color: #f47421; }
+  fieldset.sign ol { list-style: none; font-size: .91em; line-height: 1.1em; }
+    fieldset.sign ol li { display: block; margin-top: 5px; }
+      fieldset.sign ol li p { margin-bottom: 3px; line-height: 1.1em; }
+      fieldset.sign ol li label { display: block; }
+      fieldset.sign ol li input.text { width: 270px; }
+      fieldset.sign ol li input.checkbox { position: relative; top: 2px }
+      fieldset.sign ol li button { float: right; margin-right: 18px; background: none; border: 0 none; color: #f47421; font-size: 2em; font-weight: bold; text-transform: uppercase; }
+      fieldset.sign ol li button:active { color: #ccc }
+      fieldset.sign ol li a.more { float: left; font-size: 1.1em; font-weight: bold; margin-top: 13px }
+    fieldset.sign ol li.city { margin-left: 55px; width: 220px; }
+      fieldset.sign ol li.city select { width: 220px !important; }
+    fieldset.sign ol li.state { float: left; width: 50px; }
+      fieldset.sign ol li.state select { width: 50px; }
+    fieldset.sign ol li.privacy { clear: both; text-align: right; margin-right: 20px }
+    
+#captcha { display: none; position: fixed; top: 0; left: 0; z-index: 1000; width: 100%; height: 100%; background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.8); }
+  #captcha .inner { position: fixed; top: 50%; left: 1px; z-index: 1100; background: #fff; border: 0; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; }
+
+  .required label { font-weight: bold; }
+.invalid label,
+#embed p.invalid { color: #900; padding-left: 0 }
