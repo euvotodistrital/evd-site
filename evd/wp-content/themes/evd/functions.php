@@ -2985,17 +2985,14 @@ Atenciosamente,
  *
  * @param int $total - numero de videos para mostrar, default 5
  */
-function evd_show_youtube_videos($total = 5) {
+function evd_show_youtube_videos($total = 5, $videosUrl='http://gdata.youtube.com/feeds/users/uploads') {
   if (defined('WP_ZEND_GDATA_INTERFACES') && constant('WP_ZEND_GDATA_INTERFACES')) {
     Zend_Loader::loadClass('Zend_Gdata_YouTube');
-
-    $user = 'EuVotoDistrital';
-    $userVideosUrl = 'http://gdata.youtube.com/feeds/users/' . $user . '/uploads';
     
     $yt = new Zend_Gdata_YouTube();
 
     //define a query para os videos
-    $ytQuery = $yt->newVideoQuery($userVideosUrl);
+    $ytQuery = $yt->newVideoQuery($videosUrl);
     $ytQuery->setMaxResults($total);
     $ytQuery->setOrderBy('published');
     // retrieve only embeddable videos

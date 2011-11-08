@@ -1,9 +1,18 @@
 <?php get_header(); ?>
     <div class="wrap">
       <article id="multimedia">
-        <h2>Videos</h2>
         <?php
-          evd_show_youtube_videos();
+          $user = 'EuVotoDistrital';
+          $userVideosUrl = 'http://gdata.youtube.com/feeds/users/' . $user . '/uploads';
+          $favoritesVideosUrl = 'http://gdata.youtube.com/feeds/api/users/' . $user . '/favorites';
+        ?>
+        <h2>Videos (Uploads)</h2>
+        <?php
+          evd_show_youtube_videos('5', $userVideosUrl);
+        ?>
+        <h2>Videos (Favoritos)</h2>
+        <?php
+          evd_show_youtube_videos('5', $favoritesVideosUrl);
         ?>
         <a href="http://www.youtube.com/EuVotoDistrital" class="more">+ Veja todos os videos no Youtube</a>
 
