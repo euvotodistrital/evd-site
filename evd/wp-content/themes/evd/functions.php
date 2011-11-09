@@ -2392,13 +2392,13 @@ function evd_petition_goal() {
 
 
 
-function evd_social_twitter() {
+function evd_social_twitter($limit=3) {
 
   static $updates;
 
   if (empty($updates)) {
 
-    $url = 'http://search.twitter.com/search.json?q=%23euvotodistrital&rpp=3';
+    $url = 'http://search.twitter.com/search.json?q=%23euvotodistrital&rpp='.$limit;
 
     $result = evd_get_url($url);
 
@@ -2424,13 +2424,13 @@ function evd_social_twitter() {
 
 
 
-function evd_social_facebook() {
+function evd_social_facebook($limit=3) {
 
   static $updates;
 
   if (empty($updates)) {
 
-    $url = 'http://graph.facebook.com/search?q=euvotodistrital&limit=3';
+    $url = 'http://graph.facebook.com/search?q=euvotodistrital&limit='.$limit;
 
     $result = evd_get_url($url);
 
@@ -2456,13 +2456,13 @@ function evd_social_facebook() {
 
 
 
-function evd_social_all() {
+function evd_social_all($twitter_limit=3, $facebook_limit=3) {
 
   $updates = array();
 
-  $twitter = evd_social_twitter();
+  $twitter = evd_social_twitter($twitter_limit);
 
-  $facebook = evd_social_facebook();
+  $facebook = evd_social_facebook($facebook_limit);
 
   if (is_array($twitter)) {
 
@@ -2503,12 +2503,6 @@ function evd_social_all() {
       }
 
     }
-
-  }
-
-  while (count($updates) > 3) {
-
-    array_pop($updates);
 
   }
 
@@ -3069,4 +3063,51 @@ function evd_show_facebook_photos($total = 5) {
       }
     }
   }
+}
+
+/*
+ *
+ */
+
+function curl_request($url, $params = null, $headers = null)
+  {
+    if (!is_array($params)) {
+      $params = array();
+    }
+    if (!is_array($headers)) {
+      $headers = array();
+    }
+    $options = array(
+      CURLOPT_HEADER => 0,
+      CURLOPT_URL => $url . '?' . http_build_query($params),
+      CURLOPT_HTTPHEADER => $headers,
+      CURLOPT_FRESH_CONNECT => 1,
+      CURLOPT_RETURNTRANSFER => 1,
+      CURLOPT_FORBID_REUSE => 1,
+      CURLOPT_TIMEOUT => 15,
+      CURLOPT_FOLLOWLOCATION => 1,
+    );
+
+    $ch = curl_init();
+    curl_setopt_array($ch, $options);
+    $result = curl_exec($ch);
+    return $result;
+  }
+
+/*
+ *
+ */
+function evd_show_twitter_followers() {
+  $url_twitter = 'https://api.twitter.com/1/';
+  
+  $url_followers = $url_twitter . 'followers/ids.json';
+  $url_lookup = $url_twitter . 'users/lookup.json';
+  
+  //https://api.twitter.com/1/followers/ids.json?cursor=-1&screen_name=euvotodistrital&stringify_ids=true
+  $curl_followers = curl_request($url_followers, array('cursor'=>'-1', 'screen_name'=>'euvotodistrital', 'stringfy_ids'=>false));
+  $json_followers = json_decode($curl_followers);
+  
+  $json_followers->ids;
+  //https://api.twitter.com/1/users/lookup.json?user_id=49127807&include_entities=true
+  
 }

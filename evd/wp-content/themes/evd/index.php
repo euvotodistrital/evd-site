@@ -103,6 +103,13 @@
           <div class="updates" id="update-all">
             <?php $updates = evd_social_all(); ?>
             <?php if (count($updates) > 0) : ?>
+            <?php
+            while (count($updates) > 3) {
+
+              array_pop($updates);
+
+            }
+            ?>
             <ul>
               <?php $i = 1; foreach ($updates as $update) : ?>
               <li class="<?php if ($i == 1) : ?>first<?php elseif ($i == count($updates)) : ?>last<?php endif; ?>">
