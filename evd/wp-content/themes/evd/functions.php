@@ -3097,7 +3097,7 @@ function curl_request($url, $params = null, $headers = null)
 /*
  *
  */
-function evd_show_twitter_followers() {
+function evd_twitter_followers() {
   $url_twitter = 'https://api.twitter.com/1/';
   
   $url_followers = $url_twitter . 'followers/ids.json';
@@ -3107,7 +3107,47 @@ function evd_show_twitter_followers() {
   $curl_followers = curl_request($url_followers, array('cursor'=>'-1', 'screen_name'=>'euvotodistrital', 'stringfy_ids'=>false));
   $json_followers = json_decode($curl_followers);
   
-  $json_followers->ids;
-  //https://api.twitter.com/1/users/lookup.json?user_id=49127807&include_entities=true
+  $followers = $json_followers->ids;
+  $total_followers = count($followers);
+  $first_user = 0;
+  $last_user = 100;
   
+  $json_lookup = $infos = $all_followers =array();
+  
+  while ($total_followers > $last_user) {
+    $ids=$total_followers[$first_user];
+    for ($first_user; $first_user<$last_user;$first_user++) {
+      $ids .= $followers[$first_user].',';
+    }
+    $ids = substr($ids,0,-2);
+    
+    $first_user = $last_user;
+    $last_user = $last_user + 100;
+    
+    $filename=dirname(__FILE__)."/cache/".md5($ids_filename).'.json';
+    if (file_exists($filename)) {
+      $fp = file_get_contents($filename);
+      $infos = json_decode($fp);
+    }else {
+      //https://api.twitter.com/1/users/lookup.json?user_id=49127807&include_entities=true    
+      $curl_lookup = curl_request($url_lookup, array('user_id'=>$ids, 'include_entities'=>true));
+      $json_lookup = json_decode($curl_lookup);
+
+      //cache request
+      $ids_filename = str_replace(',', '',$ids);
+      $infos = array();
+      foreach ($json_lookup as $jl) {
+        $infos[] = array('id'=>$jl->id_str,
+                         'profile_image_url'=>$jl->profile_image_url,
+                         'screen_name'=>$jl->screen_name, 
+                         'name'=>$jl->name);
+      }
+      
+      $fp = fopen($filename, 'a+');
+      fwrite($fp, json_encode($infos));
+      fclose($fp);
+    }
+    $all_followers[] = $infos;
+  }
+  return $all_followers;
 }
