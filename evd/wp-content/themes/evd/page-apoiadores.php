@@ -42,10 +42,10 @@
         <style>
         div.social-stream { }
           div.social-stream ul li { float:left; list-style:none; }
-            div.social-stream ul li a img { width:50px; height:50px; }
+            div.social-stream ul li a img { width:50px; height:50px; border:0; margin:0 2px; }
         </style>
         
-        <h3>Nas Redes Sociais</h3>
+        <h3>No Twitter</h3>
         
         <div class="social-stream">
         <ul>
