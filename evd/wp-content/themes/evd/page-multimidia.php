@@ -16,7 +16,7 @@
         ?>
         <a href="http://www.youtube.com/EuVotoDistrital" class="more">+ Veja todos os videos no Youtube</a>
 
-        <h2>Fotos do movimento</h2>
+        <h2>Fotos do movimentooo</h2>
         <?php
           evd_show_facebook_photos();
         ?>
