@@ -6,7 +6,7 @@
           $userVideosUrl = 'http://gdata.youtube.com/feeds/users/' . $user . '/uploads';
           $favoritesVideosUrl = 'http://gdata.youtube.com/feeds/api/users/' . $user . '/favorites';
         ?>
-        <h2>Videos do movimento</h2>
+        <h2>Videos do movimento teste</h2>
         <?php
           evd_show_youtube_videos('5', $userVideosUrl);
         ?>
