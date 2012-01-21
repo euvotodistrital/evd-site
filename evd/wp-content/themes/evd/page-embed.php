@@ -4,10 +4,10 @@
     <title><?php wp_title('- ', true, 'right'); bloginfo('name'); ?></title>
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="author" content="Jogo12" />
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/embed.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/stylesheets/embed.css" media="all" />
     <link rel="shortcut icon" type="image/png" href="<?php echo home_url('favicon.png'); ?>" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/embed.js" charset="utf-8"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/javascripts/embed.js" charset="utf-8"></script>
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-22305241-1']);
