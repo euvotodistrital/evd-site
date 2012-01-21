@@ -8,11 +8,9 @@ Iniciando com o GIT e com o GITHUB
 Configurando o wordpress local
 
 1. Faça o clone do repositório em uma pasta do servidor web em seu computador;
-2. Crie um banco de dados no servidor local mysql e guarde as configurações(nome do banco, usuário e senha);
-3. Rode o arquivo sql que está na raiz do repositório para o banco de dados que acabou de criar;
-4. Rode os seguintes comandos SQL's "update wp_options set option_value="http://localhost/evd-site/evd/" where option_id=1;" e "update wp_options set option_value="http://localhost/evd-site/" where option_id=37;" alterando o caminho do servidor para de acordo com sua necessidade;
-5. Habilite o "mod_rewrite" no apache e opie o arquivo .htaccess-sample para .htaccess que está na raiz;
-6. Arquivo no .htaccess a diretiva "RewriteBase" de acordo com sua necessidade;
-5. Copie o arquivo wp-config.php.sample para wp-config.php e altere os dados de acesso ao banco de dados;
+2. Acesse a url e crie as configurações do wordpress - wp-config.php
+3. Rode os arquivos sql que estão na pasta db
+4. Habilite o "mod_rewrite" no apache e copie o arquivo .htaccess-sample para .htaccess que está na raiz;
+5. Altere no .htaccess a diretiva "RewriteBase" de acordo com sua necessidade;
 
 Acesse o endereço local e comece a contribuir, agora você já pode!
