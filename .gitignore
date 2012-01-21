@@ -1,3 +1,4 @@
 .htaccess
 evd/wp-content/themes/evd/cache/*
 evd/wp-content/uploads/2011/*
+evd/wp-config.php

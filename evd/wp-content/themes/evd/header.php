@@ -19,12 +19,12 @@
   <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style-ie.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/stylesheets/style-ie.css" media="all" />
   <![endif]-->
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" charset="utf-8"></script>
-  <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/evd.js" charset="utf-8"></script>
+  <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/javascripts/evd.js" charset="utf-8"></script>
   <?php if (is_page('assinaturas')) { ?>
-    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/multiplesign.js" charset="utf-8"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/javascripts/multiplesign.js" charset="utf-8"></script>
   <?php } ?>
   <?php wp_head(); ?>
   <script type="text/javascript">
