@@ -455,7 +455,7 @@ var evd = {
   },
   supporters: {
     showNames: function() {
-      $('#social-supporters').find('img').tipsy();
+      $('#social-supporters').find('img').tipsy({gravity: 's', fade: true});
     }
   }
 };

@@ -19,7 +19,7 @@ body { font-size: .75em; }
 
 #page { width: 940px; margin: 0 auto; padding: 0 35px 0 25px; overflow: hidden }
   #page > .wrap { margin-left: 82px; padding-top: 25px; border-top: 1px solid #f2f1f1; }
-  header { position: relative; height: 170px; }
+  header { position: relative; height: 180px; }
   footer { clear: both; height: 35px; margin-top: 23px; border-top: 1px solid #f2f1f1; }
 
 /* --- Tags --- */
@@ -90,6 +90,7 @@ nav.secondary { float: right; padding: 8px 0; }
         nav.secondary div ul li.imprensa a { margin-right: 0 }
         nav.secondary div ul li.rss a { background-image: url('images/secondary-rss.png'); }
         nav.secondary div ul li.facebook a { background-image: url('images/secondary-facebook.png'); }
+        nav.secondary div ul li.facebook a { background-image: url('images/secondary-facebook.png'); }
         nav.secondary div ul li.twitter a { background-image: url('images/secondary-twitter.png'); }
         nav.secondary div ul li.orkut a { background-image: url('images/secondary-orkut.png'); }
         nav.secondary div ul li.like a { width: 47px; background-image: url('images/secondary-like.png'); margin-right: 0 }
@@ -114,7 +115,7 @@ header h2 { float: left; width: 268px; height: 107px; margin: 13px 0 0; backgrou
   header h1 a, 
   header h2 a { display: block; height: 100%; text-indent: -9999em; }
 
-header nav.primary { position: relative; float: right; height: 52px; margin-top: 110px; }
+header nav.primary { position: relative; float: right; height: 52px; margin-top: 120px; }
   header nav.primary ul { }
     header nav.primary ul li { margin-left: 15px; font-size: 1.5em; text-transform: uppercase; letter-spacing: -.07em; font-weight: bold; }
     header nav.primary ul li.first { margin-left: 0 !important; }
@@ -141,6 +142,7 @@ header nav.secondary { position: absolute; top: 0; right: 0; }
   .box .votes {  }
     .box .votes h4 { width: 248px; height: 25px; margin-left: -18px; background: #bdd73d /* url('images/home-vote-background.png') repeat */ ; font-size: 1em; line-height: 1.92em; }
       .box .votes h4 span { display: block; width: 50%; height: 100%; background: #064b7e; color: #fff; font-size: 2em; text-align: left; text-indent: 20px; }
+
     .box .votes p { margin: 5px 0 10px; font-size: .95em; line-height: 1.16em; }
   .box ol.why-slider { position: relative; height: 115px; margin-top: 10px; list-style: none; }
     .box ol.why-slider li { display: inline; margin-right: 5px; }
@@ -177,6 +179,7 @@ header nav.secondary { position: absolute; top: 0; right: 0; }
 
 fieldset.sign { margin: 6px 0; }
   fieldset.sign h2 { height: 83px; margin-top: 0px; color: #064b7e; font-size: 1.42em; line-height: 1.16em; }
+
     fieldset.sign h2 a { color: #f47421; }
   fieldset.sign ol { font-size: .91em; line-height: 1.1em; }
     fieldset.sign ol li { display: block; margin-top: 4px; }
@@ -219,6 +222,7 @@ fieldset.contact { }
   .social-share fieldset { margin-top: 15px; }
     .social-share fieldset input.text { width: 210px; }
     .social-share fieldset button { float: right; width: 84px; height: 23px; margin-top: 1px; background: url('images/steps-copy-link.png') no-repeat center center; border: 0 none; text-indent: -9999em; }
+
     .social-share fieldset button:active { opacity: .6; }
 
 dl.blog-highlights { color: #333; }
@@ -248,8 +252,9 @@ article { float: left; width: 535px; }
 
 article.one-column { width: 850px; }
 
-  article nav.utils { height: 20px; margin: 18px 0; padding: 3px 0; border: 1px solid #f2f1f1; border-width: 1px 0; }
-    article nav.utils div { padding: 0 2px }
+  article nav.utils { height: 20px; text-align: left; margin: 18px 0; padding: 3px 0; border: 1px solid #f2f1f1; border-width: 1px 0; }
+    article nav.utils div { float: left; text-align: left; padding: 0 2px }
+    article nav.utils div.last { clear: none }
       article nav.utils div ul { margin-top: 2px; }
       article nav.utils div.first ul { margin-top: 4px; }
       article nav.utils div.last ul { margin-top: 0; }
@@ -274,7 +279,7 @@ article.one-column { width: 850px; }
             article nav.utils div ul li.share-all div a { width: 18px; margin: 3px 0 0; padding: 0; background: none; }
               article nav.utils div ul li.share-all div a span { margin-top: -1px; }
 
-  article .content { line-height: 1.5em; }
+  article .content { line-height: 1.5em; clear: both }
     article .content a:hover { text-decoration: underline; }
     article .content h3 { margin: 25px 0 20px; font-size: 1.67em; }
       article .content h3 span { padding: 0 6px 4px 15px; background-color: #bdd73d; }
@@ -491,6 +496,7 @@ form#multiple-sign {}
 /* --- Tipsy --- */
 .tipsy { font-size: 10px; position: absolute; padding: 5px; z-index: 100000; }
   .tipsy-inner { background-color: #000; color: #FFF; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }
+
 
   /* Rounded corners */
   .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
