@@ -23,6 +23,7 @@
   <![endif]-->
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/javascripts/evd.js" charset="utf-8"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/javascripts/jquery.tipsy.js" charset="utf-8"></script>
   <?php if (is_page('assinaturas')) { ?>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/javascripts/multiplesign.js" charset="utf-8"></script>
   <?php } ?>
@@ -39,6 +40,14 @@
   </script>
 </head>
 <body <?php body_class($class); ?>>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
   <div id="page">
     <header>
       <?php $h_level = is_home() || is_page('blog') ? 'h1' : 'h2'; ?>

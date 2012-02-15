@@ -19,7 +19,7 @@ body { font-size: .75em; }
 
 #page { width: 940px; margin: 0 auto; padding: 0 35px 0 25px; overflow: hidden }
   #page > .wrap { margin-left: 82px; padding-top: 25px; border-top: 1px solid #f2f1f1; }
-  header { position: relative; height: 146px; }
+  header { position: relative; height: 170px; }
   footer { clear: both; height: 35px; margin-top: 23px; border-top: 1px solid #f2f1f1; }
 
 /* --- Tags --- */
@@ -38,9 +38,9 @@ h5,
 h6 { font-size: 1em; }
 
 nav { display: block; }
-  nav div { float: left; padding: 0 10px; background: url('images/secondary-div.png') no-repeat right 7px; }
+  nav div { float: right; padding: 0 10px; background: url('images/secondary-div.png') no-repeat right 7px; margin-bottom: 10px }
   nav div.first { padding-left: 0 !important; }
-  nav div.last { padding-right: 0 !important; background-image: none; }
+  nav div.last { clear: both; padding-right: 0 !important; background-image: none; }
   nav ul { list-style: none; }
     nav ul li { display: inline; }
 
@@ -71,11 +71,15 @@ a { color: #999; text-decoration: none; }
 
 nav.secondary { float: right; padding: 8px 0; }
   nav.secondary div { padding: 0 7px; }
+  nav.secondary div.middle { background-image: none; padding-right: 0 }
     nav.secondary div ul { margin-top: 1px; }
     nav.secondary div.first ul { margin-top: 2px; }
     nav.secondary div.last ul { margin-top: 0; }
       nav.secondary div ul li { text-indent: -9999em; }
         nav.secondary div ul li a { display: block; float: left; width: 18px; height: 18px; margin-right: 5px; background: none no-repeat center center; }
+        nav.secondary div.middle ul li.twitter a { margin-right: 0; }
+	  nav.secondary div.last ul li.like div { float: left;  background: none; margin-bottom: 0; padding-right: 0 }
+	    nav.secondary div.last ul li.like div span { display: block; width: 300px; }
         nav.secondary div ul li iframe { float: left; margin-right: 5px; }
         nav.secondary div.first ul li a { height: 15px; }
         nav.secondary div.last ul li a { height: 20px; }
@@ -110,7 +114,7 @@ header h2 { float: left; width: 268px; height: 107px; margin: 13px 0 0; backgrou
   header h1 a, 
   header h2 a { display: block; height: 100%; text-indent: -9999em; }
 
-header nav.primary { position: relative; float: right; height: 52px; margin-top: 86px; }
+header nav.primary { position: relative; float: right; height: 52px; margin-top: 110px; }
   header nav.primary ul { }
     header nav.primary ul li { margin-left: 15px; font-size: 1.5em; text-transform: uppercase; letter-spacing: -.07em; font-weight: bold; }
     header nav.primary ul li.first { margin-left: 0 !important; }
@@ -123,7 +127,7 @@ header nav.primary { position: relative; float: right; height: 52px; margin-top:
         header nav.primary ul li ul li { margin-left: 10px; font-size: 1em; font-weight: normal; }
           header nav.primary ul li ul li a { color: #999; }
 
-header nav.secondary { position: absolute; top: 0; right: 0; border-bottom: 1px solid #f2f1f1; }
+header nav.secondary { position: absolute; top: 0; right: 0; }
 
 /* --- Content --- */
 
@@ -449,6 +453,9 @@ form#multiple-sign {}
 /* --- Apoiadores -- */
 #box-supporters {background: url(images/sidebar-map.png) no-repeat 17px 37px; height: 220px}
   #box-supporters .more-highlight {position: relative; top: 136px; width: 224px}
+#social-supporters {}
+  #social-supporters li { list-style: none; float: left; margin: 4px; }
+  #social-supporters li img {width: 48px; height: 48px; }
 
 /* --- Multimedia --- */
 #multimedia {}
@@ -481,6 +488,32 @@ form#multiple-sign {}
     #legislators-form #legislator-message p {margin-bottom: 10px}
   #legislators-form .send-message {font-size: 2em; font-weight: bold; color: #F47421; text-transform: uppercase; background: transparent; border: 0}
 
+/* --- Tipsy --- */
+.tipsy { font-size: 10px; position: absolute; padding: 5px; z-index: 100000; }
+  .tipsy-inner { background-color: #000; color: #FFF; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }
+
+  /* Rounded corners */
+  .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+  
+  /* Uncomment for shadow */
+  /*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+  
+  .tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
+  
+  /* Rules to colour arrows */
+  .tipsy-arrow-n { border-bottom-color: #000; }
+  .tipsy-arrow-s { border-top-color: #000; }
+  .tipsy-arrow-e { border-left-color: #000; }
+  .tipsy-arrow-w { border-right-color: #000; }
+  
+.tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
+    .tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
+  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -5px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-se .tipsy-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+  .tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
+  .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
 
 /* --- Clearer --- */
 

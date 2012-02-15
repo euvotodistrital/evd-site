@@ -17,6 +17,7 @@ var evd = {
     evd.multimedia.closeMedia();
     evd.legislators.bindLoadNames();
     evd.legislators.validate();
+    evd.supporters.showNames();
   },
 
   css : {
@@ -450,6 +451,11 @@ var evd = {
           alert('Ops! Alguns campos estão em branco ou são inválidos.');
         }
       })
+    }
+  },
+  supporters: {
+    showNames: function() {
+      $('#social-supporters').find('img').tipsy();
     }
   }
 };
