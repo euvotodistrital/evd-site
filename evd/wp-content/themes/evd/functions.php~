@@ -3,7 +3,8 @@
 
 define('EVD_MAIL_API_URL',      'http://216.70.69.79/api');
 
-define('EVD_MAIL',              'contato@euvotodistrital.org.br');
+//define('EVD_MAIL',              'contato@euvotodistrital.org.br');
+define('EVD_MAIL',              'beatrizdcp@gmail.com');
 
 define('EVD_FROM',              'noreply@euvotodistrital.org.br');
 
@@ -543,32 +544,6 @@ function evd_social_bar() {
 
   <nav class="secondary">
 
-    <div class="middle">
-
-      <ul>
-
-        <li class="rss first">
-
-          <a href="<?php bloginfo('rss2_url'); ?>" title="Assinar o feed RSS">Feed RSS</a>
-
-        </li>
-
-        <li class="facebook">
-
-          <a href="http://www.facebook.com/euvotodistrital" title="Página do movimento no Facebook" rel="external">Facebook</a>
-
-        </li>
-
-        <li class="twitter">
-
-          <a href="http://www.twitter.com/euvotodistrital" title="Perfil do movimento no Twitter" rel="external">Twitter</a>
-
-        </li>
-
-      </ul>
-
-    </div>
-
     <div class="first">
 
       <ul>
@@ -595,13 +570,41 @@ function evd_social_bar() {
 
     </div>
 
+    <div>
+
+      <ul>
+
+        <li class="rss first">
+
+          <a href="<?php bloginfo('rss2_url'); ?>" title="Assinar o feed RSS">Feed RSS</a>
+
+        </li>
+
+        <li class="facebook">
+
+          <a href="http://www.facebook.com/euvotodistrital" title="Página do movimento no Facebook" rel="external">Facebook</a>
+
+        </li>
+
+        <li class="twitter">
+
+          <a href="http://www.twitter.com/euvotodistrital" title="Perfil do movimento no Twitter" rel="external">Twitter</a>
+
+        </li>
+
+      </ul>
+
+    </div>
+
     <div class="last">
 
       <ul>
 
         <li class="like first">
 
-         <div class="fb-like" data-href="http://www.facebook.com/euvotodistrital" data-send="false" data-width="300" data-show-faces="true"></div>
+          <!--<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode('http://www.facebook.com/euvotodistrital'); ?>&amp;layout=button_count&amp;show_faces=true&amp;width=170&amp;action=like&amp;font&amp;colorscheme=light&amp;height=21&amp;locale=pt_BR" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:170px; height:21px;" allowTransparency="true"></iframe>-->
+<div class="fb-like" data-href="http://euvotodistrital.org.br" data-send="false" data-width="170" data-show-faces="false"></div>
+
         </li>
 
         <li class="share">
@@ -3052,53 +3055,9 @@ function evd_show_facebook_photos($total = 5) {
   }
 }
 
-
-/**
-* Pega os apoiadores do movimento - usuários do twitter e do facebook
-*/
-function evd_get_supporters($total = 42) {
-	$twitter = evd_get_twitter_supporters($total);
-	shuffle($twitter);
-
-	return $twitter;
-}
-
-
-/**
-* Followers do twitter
-**/
-function evd_get_twitter_supporters($total) {
-  $url_twitter = 'https://api.twitter.com/1/';
-  
-  $url_followers = $url_twitter . 'followers/ids.json';
-  $url_lookup = $url_twitter . 'users/lookup.json';
-  
-  //https://api.twitter.com/1/followers/ids.json?cursor=-1&screen_name=euvotodistrital&stringify_ids=true
-  $curl_followers = curl_request($url_followers, array('cursor'=>'-1', 'screen_name'=>'euvotodistrital', 'stringfy_ids'=>false));
-  $json_followers = json_decode($curl_followers);
-  
-  $followers = $json_followers->ids;
-
-  //coloca os followers numa ordem randomica e pega os $total primeiros
-  shuffle($followers);
-  $followers = array_slice($followers, 0, $total);
-  
-  $curl_lookup = curl_request($url_lookup, array('user_id'=>implode(',', $followers), 'include_entities'=>false));
-  $json_lookup = json_decode($curl_lookup);
-
-  $users = array();
-
-  foreach($json_lookup as $user) {
-    $users[] = array(
-      'name'     => $user->name,
-      'username'     => $user->screen_name,
-      'avatar'   => $user->profile_image_url 
-    );
-  }
-
-  return $users;
-}
-
+/*
+ *
+ */
 
 function curl_request($url, $params = null, $headers = null)
   {
@@ -3124,3 +3083,61 @@ function curl_request($url, $params = null, $headers = null)
     $result = curl_exec($ch);
     return $result;
   }
+
+/*
+ *
+ */
+function evd_twitter_followers() {
+  $url_twitter = 'https://api.twitter.com/1/';
+  
+  $url_followers = $url_twitter . 'followers/ids.json';
+  $url_lookup = $url_twitter . 'users/lookup.json';
+  
+  //https://api.twitter.com/1/followers/ids.json?cursor=-1&screen_name=euvotodistrital&stringify_ids=true
+  $curl_followers = curl_request($url_followers, array('cursor'=>'-1', 'screen_name'=>'euvotodistrital', 'stringfy_ids'=>false));
+  $json_followers = json_decode($curl_followers);
+  
+  $followers = $json_followers->ids;
+  $total_followers = count($followers);
+  $first_user = 0;
+  $last_user = 100;
+  
+  $json_lookup = $infos = $all_followers =array();
+  
+  while ($total_followers > $last_user) {
+    $ids=$total_followers[$first_user];
+    for ($first_user; $first_user<$last_user;$first_user++) {
+      $ids .= $followers[$first_user].',';
+    }
+    $ids = substr($ids,0,-2);
+    
+    $first_user = $last_user;
+    $last_user = $last_user + 100;
+    
+    $filename=dirname(__FILE__)."/cache/".md5($ids_filename).'.json';
+    if (file_exists($filename)) {
+      $fp = file_get_contents($filename);
+      $infos = json_decode($fp);
+    }else {
+      //https://api.twitter.com/1/users/lookup.json?user_id=49127807&include_entities=true    
+      $curl_lookup = curl_request($url_lookup, array('user_id'=>$ids, 'include_entities'=>true));
+      $json_lookup = json_decode($curl_lookup);
+
+      //cache request
+      $ids_filename = str_replace(',', '',$ids);
+      $infos = array();
+      foreach ($json_lookup as $jl) {
+        $infos[] = array('id'=>$jl->id_str,
+                         'profile_image_url'=>$jl->profile_image_url,
+                         'screen_name'=>$jl->screen_name, 
+                         'name'=>$jl->name);
+      }
+      
+      $fp = fopen($filename, 'a+');
+      fwrite($fp, json_encode($infos));
+      fclose($fp);
+    }
+    $all_followers[] = $infos;
+  }
+  return $all_followers;
+}
