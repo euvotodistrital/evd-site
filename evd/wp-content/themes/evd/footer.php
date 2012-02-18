@@ -1,5 +1,5 @@
     <footer>
-      <p><a class="cc" href="http://creativecommons.org/licenses/by-nc-sa/3.0/br/" title="Creative Commons" rel="external">Creative Commons</a> 2011 #euvotodistrital<span>  |  feito por <a href="http://www.jogo12.net/" title="jogo12" rel="external">jogo12</a> no <a title="PTODECONTATO" href="http://www.ptodecontato.com.br" rel="external">PTODECONTATO</a></span></p>
+      <p><a class="cc" href="http://creativecommons.org/licenses/by-nc-sa/3.0/br/" title="Creative Commons" rel="external">Creative Commons</a> 2011 #euvotodistrital<span>  |  feito por <a href="http://www.jogo12.net/" title="Jogo12" rel="external">Jogo12</a> no <a title="Pto de Contato" href="http://www.ptodecontato.com.br" rel="external">Pto de Contato</a></span></p>
       <?php evd_social_bar(); ?>
     </footer>
   </div>
